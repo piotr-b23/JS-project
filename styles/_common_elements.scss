@@ -8,19 +8,32 @@
 }
 
 body {
-    background-color: $colorBackground;
+    background-image: $colorBackground;
+    font-family: $fontMain;
 }
 
 html, body {
     height: 100%;
 }
 
-/*
 .header {
-
+text-align: center;
+padding: 10px;
+background-image: $colorHeader;
+color: $colorFontHeader;
+font-variant: small-caps;
+font-family: $fontHeader;
 }
 
 .footer {
+text-align: center;
+background-image: $colorFooter;
+color: $colorFontFooter;
+font-weight: bolder;
+padding: 5px;
+p {
+    padding: 3px;
+    font-size: 20px;
+}
 
 }
-*/

@@ -1,2 +1,27 @@
 @import "_common_elements.scss";
 @import "grid_items.scss";
+
+.grid-main-container{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    min-height: 100%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    'header'
+    'top-navbar'
+    'article'
+    'footer';
+    gap: 15px;
+}
+
+.article{
+    padding: 15px;
+    text-align: center;
+    h2{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
