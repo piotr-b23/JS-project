@@ -1,0 +1,13 @@
+@import "_common_elements.scss";
+@import "grid_items.scss";
+
+.grid-material-cost-container{
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'top-navbar top-navbar top-navbar top-navbar'
+    'article article article article'
+    'printer-name printer-name printer-answer printer-answer'
+    'footer footer footer footer';
+    gap: 15px;
+}

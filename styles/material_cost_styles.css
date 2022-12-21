@@ -1,1 +1,114 @@
-/*# sourceMappingURL=material_cost_styles.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(201, 201, 201));
+  font-family: "Inconsolata";
+}
+
+html, body {
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right, rgb(14, 90, 4), rgb(10, 66, 2));
+  color: rgb(255, 255, 255);
+  font-variant: small-caps;
+  font-family: "Quicksand";
+}
+
+.navbar-top {
+  background-image: linear-gradient(to bottom right, rgb(120, 219, 107), rgb(98, 219, 82));
+  margin-top: -5px;
+}
+.navbar-top ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  padding: 2px;
+}
+.navbar-top ul li {
+  position: relative;
+  padding: 20px;
+  display: block;
+}
+.navbar-top ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.navbar-top ul li:hover {
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgb(255, 235, 232), rgb(224, 212, 171));
+}
+.navbar-top li.active {
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgb(105, 158, 98), rgb(80, 173, 68));
+}
+
+.article {
+  padding: 15px;
+  text-align: center;
+}
+.article h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.article p {
+  font-size: 20px;
+}
+
+.footer {
+  text-align: center;
+  background-image: linear-gradient(to bottom right, rgb(14, 90, 4), rgb(10, 66, 2));
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding: 5px;
+}
+.footer p {
+  padding: 3px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-top ul {
+    flex-direction: column;
+  }
+  .navbar-top li.active {
+    width: 98%;
+    text-align: center;
+  }
+  .navbar-top li:hover {
+    width: 98%;
+    text-align: center;
+  }
+}
+.item-header {
+  grid-area: header;
+}
+
+.item-top-navbar {
+  grid-area: top-navbar;
+}
+
+.item-article {
+  grid-area: article;
+}
+
+.item-footer {
+  grid-area: footer;
+}
+
+.grid-material-cost-container {
+  display: grid;
+  grid-template-areas: "header header header header" "top-navbar top-navbar top-navbar top-navbar" "article article article article" "printer-name printer-name printer-answer printer-answer" "footer footer footer footer";
+  gap: 15px;
+}/*# sourceMappingURL=material_cost_styles.css.map */
