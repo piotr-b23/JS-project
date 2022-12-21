@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Print cost comparasion</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Site used to compare printing costs">
+        <link rel ="stylesheet" href=".\styles\material_cost_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="grid-material-cost-container">
+            <div class="item-header">
+                <div class="header">
+                    <h1>Printing costs calculator</h1>
+                </div>
+
+            </div>
+            <div class="item-top-navbar">
+                <div class="navbar-top">
+                    <ul>
+                        <li><a href="main.htm">Main</a></li>
+                        <li class="active"><a href="#header">Raw material costs</a></li>
+                        <li><a href="printing_cost.htm">Printing service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="item-article">
+                <div class="article">
+                    <h2 class="article-header">Raw printing costs.</h2>
+                    <p class="article-content">
+                        Input the price of your toner cartiges and number of pages they can print.
+                        This information is often provived by a manufacturer. The numbers may vary
+                        in real life applications but it is better than nothing.<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="item-form-printer">
+                <label for="printer">Printer: </label>
+            </div>
+            <div class="item-form-printer-answer">
+                <input type="text" id="printer" name="printer">
+            </div>
+
+            <div class="item-form-blackCount">
+                <label for="blackCount">Black count: </label>
+            </div>
+            <div class="item-form-blackCount-answer">
+                <input type="number" step="0.01" id="blackCount" name="blackCount">
+            </div>
+
+            <div class="item-form-colorCount">
+                <label for="colorCount">Color count: </label>
+            </div>
+            <div class="item-form-colorCount-answer">
+                <input type="number" step="0.01" id="colorCount" name="colorCount">
+            </div>
+
+            <div class="item-form-blackCost">
+                <label for="blackCost">Black cost: </label>
+            </div>
+            <div class="item-form-blackCost-answer">
+                <input type="number" step="0.01" id="blackCost" name="blackCost">
+            </div>
+
+            <div class="item-form-cyanCost">
+                <label for="cyanCost">Cyan cost: </label>
+            </div>
+            <div class="item-form-cyanCost-answer">
+                <input type="number" step="0.01" id="cyanCost" name="cyanCost">
+            </div>
+            
+            <div class="item-form-magentaCost">
+                <label for="magentaCost">Magenta cost: </label>
+            </div>
+            <div class="item-form-magentaCost-answer">
+                <input type="number" step="0.01" id="magentaCost" name="magentaCost">
+            </div>
+
+            <div class="item-form-yellowCost">
+                <label for="yellowCost">Yellow cost: </label>
+            </div>
+            <div class="item-form-yellowCost-answer">
+                <input type="number" step="0.01" id="yellowCost" name="yellowCost">
+            </div>
+
+            <div class="item-form-button">
+                <button>Calculate</button>
+            </div>
+
+            <div class="item-summary">
+                <div class="summery">
+                    <h2 class="article-header">Summary</h2>
+                    <p class="article-content">
+                    </p>
+                </div>
+            </div>
+
+            <div class="item-footer">
+                <div class="footer">
+                    <p>This site was created by Piotr Bobeł</p>
+                    <p>All rights reserved</p>
+                    <p>Do not use without author permission </p>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+
+</html>
