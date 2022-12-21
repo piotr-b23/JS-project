@@ -16,3 +16,24 @@
     'footer footer footer footer';
     gap: 5px;
 }
+
+@media screen and (max-width:700px) {
+    .grid-material-cost-container{
+        display: grid;
+        grid-template-areas:
+        'header header'
+        'top-navbar top-navbar'
+        'article article'
+        'printer-name printer-answer'
+        'black-count black-answer'
+        'color-count color-answer'
+        'black-cost black-cost-answer' 
+        'cyan-cost cyan-cost-answer'
+        'magenta-cost magenta-cost-answer' 
+        'yellow-cost yellow-cost-answer'
+        'button button'
+        'summary summary'
+        'footer footer';
+        gap: 5px;
+    }
+}

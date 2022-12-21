@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(201, 201, 201));
+  background-color: rgb(224, 224, 224);
   font-family: "Inconsolata";
 }
 
@@ -64,6 +64,36 @@ html, body {
 }
 .article p {
   font-size: 20px;
+}
+
+label {
+  font-size: 35px;
+  padding: 15px;
+}
+
+input[type=text], input[type=number] {
+  width: 75%;
+  height: 50px;
+  font-size: 35px;
+  padding: 5px;
+}
+
+button {
+  width: 90%;
+  height: 65px;
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(190, 190, 190);
+}
+
+.summary {
+  padding: 15px;
+  text-align: center;
 }
 
 .footer {
@@ -160,6 +190,7 @@ html, body {
 }
 
 .item-form-button {
+  text-align: center;
   grid-area: button;
 }
 
