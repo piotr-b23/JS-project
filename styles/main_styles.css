@@ -47,7 +47,7 @@ html, body {
 }
 .navbar-top ul li:hover {
   border-radius: 15px;
-  background-image: linear-gradient(to bottom right, rgb(255, 235, 232), rgb(224, 212, 171));
+  background-image: linear-gradient(to bottom right, rgb(78, 151, 63), rgb(28, 109, 39));
 }
 .navbar-top li.active {
   border-radius: 15px;
@@ -94,6 +94,7 @@ button:hover {
 .summary {
   padding: 15px;
   text-align: center;
+  visibility: hidden;
 }
 
 .footer {
