@@ -22,6 +22,38 @@ html, body {
   font-family: "Quicksand";
 }
 
+.navbar-top {
+  background-image: linear-gradient(to bottom right, rgb(120, 219, 107), rgb(98, 219, 82));
+  margin-top: -5px;
+}
+.navbar-top ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  padding: 2px;
+}
+.navbar-top ul li {
+  position: relative;
+  padding: 20px;
+  display: block;
+}
+.navbar-top ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.navbar-top ul li:hover {
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgb(255, 235, 232), rgb(224, 212, 171));
+}
+.navbar-top li.active {
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgb(105, 158, 98), rgb(80, 173, 68));
+}
+
 .footer {
   text-align: center;
   background-image: linear-gradient(to bottom right, rgb(14, 90, 4), rgb(10, 66, 2));
@@ -34,6 +66,19 @@ html, body {
   font-size: 20px;
 }
 
+@media screen and (max-width: 700px) {
+  .navbar-top ul {
+    flex-direction: column;
+  }
+  .navbar-top li.active {
+    width: 98%;
+    text-align: center;
+  }
+  .navbar-top li:hover {
+    width: 98%;
+    text-align: center;
+  }
+}
 .item-header {
   grid-area: header;
 }
@@ -56,7 +101,7 @@ html, body {
   min-height: 100%;
   grid-template-columns: 100%;
   grid-template-areas: "header" "top-navbar" "article" "footer";
-  gap: 15px;
+  gap: 5px;
 }
 
 .article {

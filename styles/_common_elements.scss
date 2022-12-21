@@ -25,6 +25,40 @@ font-variant: small-caps;
 font-family: $fontHeader;
 }
 
+.navbar-top {
+    background-image: $colorNavbar;
+    margin-top: -5px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: center;
+        padding: 2px;
+        
+        li{
+            position: relative;
+            padding: 20px;
+            display: block;
+            a {
+                text-decoration: none;
+                text-align: center;
+                font-size: 25px;
+                font-weight: bold;
+                color: $colorFontNavbar;
+                
+            }
+        }
+        li:hover {
+            border-radius: 15px;
+            background-image: $colorNavbarHover;
+        }
+    }
+    li.active{
+        border-radius: 15px;
+        background-image: $colorNavbarActive;
+    }
+}
+
 .footer {
 text-align: center;
 background-image: $colorFooter;
@@ -36,4 +70,21 @@ p {
     font-size: 20px;
 }
 
+}
+
+@media screen and (max-width:700px) {
+    .navbar-top{
+        ul{
+            flex-direction: column;
+        }
+        li.active{
+            width: 98%;
+            text-align: center;
+        }
+        li:hover{
+            width: 98%;
+            text-align: center;
+        }
+        
+    }
 }
