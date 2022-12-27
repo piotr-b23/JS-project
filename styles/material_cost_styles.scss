@@ -3,6 +3,9 @@
 
 .grid-material-cost-container{
     display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto 1fr;
+    min-height: 100%;
+    grid-template-columns: auto auto auto auto;
     grid-template-areas:
     'header header header header'
     'top-navbar top-navbar top-navbar top-navbar'
