@@ -75,6 +75,44 @@
     grid-area: summary;
 }
 
+
+
+
+.item-form-printer-first{
+    grid-area: printer-name;
+}
+
+.item-form-printer-first-answer{
+    grid-area: printer-answer;
+}
+
+.item-form-first-printerCost{
+    grid-area: printer-name;
+}
+
+.item-form-first-printerCost-answer{
+    grid-area: printer-answer;
+}
+
+.item-form-first-blackCost{
+    grid-area: printer-name;
+}
+
+.item-form-first-blackCost-answer{
+    grid-area: printer-answer;
+}
+
+.item-form-first-colorCost{
+    grid-area: printer-name;
+}
+
+.item-form-first-colorCost-answer{
+    grid-area: printer-answer;
+}
+
+
+
+
 .item-footer{
     grid-area: footer;
 }

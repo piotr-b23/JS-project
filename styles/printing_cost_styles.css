@@ -199,6 +199,38 @@ button:hover {
   grid-area: summary;
 }
 
+.item-form-printer-first {
+  grid-area: printer-name;
+}
+
+.item-form-printer-first-answer {
+  grid-area: printer-answer;
+}
+
+.item-form-first-printerCost {
+  grid-area: printer-name;
+}
+
+.item-form-first-printerCost-answer {
+  grid-area: printer-answer;
+}
+
+.item-form-first-blackCost {
+  grid-area: printer-name;
+}
+
+.item-form-first-blackCost-answer {
+  grid-area: printer-answer;
+}
+
+.item-form-first-colorCost {
+  grid-area: printer-name;
+}
+
+.item-form-first-colorCost-answer {
+  grid-area: printer-answer;
+}
+
 .item-footer {
   grid-area: footer;
 }
@@ -208,14 +240,6 @@ button:hover {
   grid-template-rows: auto auto auto auto auto auto auto auto 1fr;
   min-height: 100%;
   grid-template-columns: auto auto auto auto;
-  grid-template-areas: "header header header header" "top-navbar top-navbar top-navbar top-navbar" "article article article article" "printer-name printer-name printer-answer printer-answer" "black-count black-answer color-count color-answer" "black-cost black-cost-answer cyan-cost cyan-cost-answer" "magenta-cost magenta-cost-answer yellow-cost yellow-cost-answer" "button button button button" "summary summary summary summary" "footer footer footer footer";
+  grid-template-areas: "header header header header" "top-navbar top-navbar top-navbar top-navbar" "article article article article" "printer-first-name printer-first-name printer-first-answer printer-first-answer" "printer-first-cost printer-first-cost printer-first-cost-answer printer-first-cost-answer" "printer-first-black-cost printer-first-black-cost printer-first-black-cost-answer printer-first-black-cost-answer" "printer-first-color-cost printer-first-color-cost printer-first-cost-color-answer printer-first-color-cost-answer" "printer-second-name printer-second-name printer-second-answer printer-first-answer" "printer-second-cost printer-second-cost printer-second-cost-answer printer-second-cost-answer" "printer-second-black-cost printer-second-black-cost printer-second-black-cost-answer printer-second-black-cost-answer" "printer-second-color-cost printer-second-color-cost printer-second-cost-color-answer printer-second-color-cost-answer" "printer-ratio-black printer-ratio-black printer-ratio-black-answer printer-ratio-black-answer" "printer-ratio-color printer-ratio-color printer-ratio-color-answer printer-ratio-color-answer" "button button button button" "summary summary summary summary" "footer footer footer footer";
   gap: 5px;
-}
-
-@media screen and (max-width: 700px) {
-  .grid-service-cost-container {
-    display: grid;
-    grid-template-areas: "header header" "top-navbar top-navbar" "article article" "printer-name printer-answer" "black-count black-answer" "color-count color-answer" "black-cost black-cost-answer" "cyan-cost cyan-cost-answer" "magenta-cost magenta-cost-answer" "yellow-cost yellow-cost-answer" "button button" "summary summary" "footer footer";
-    gap: 5px;
-  }
 }/*# sourceMappingURL=printing_cost_styles.css.map */
