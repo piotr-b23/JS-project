@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        <script src="raw_cost_script.js"></script>
         <div class="grid-material-cost-container">
             <div class="item-header">
                 <div class="header">
@@ -87,13 +88,13 @@
             </div>
 
             <div class="item-form-button">
-                <button>Calculate</button>
+                <button onclick="calculateCosts()">Calculate</button>
             </div>
 
             <div class="item-summary">
-                <div class="summary">
+                <div class="summary" id="summary">
                     <h2 class="article-header">Summary</h2>
-                    <p class="article-content">
+                    <p class="article-content" id="summaryText">
                     </p>
                 </div>
             </div>
