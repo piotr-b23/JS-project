@@ -5,21 +5,21 @@
     display: grid;
 
     grid-template-areas:
-    'header header header header'
-    'top-navbar top-navbar top-navbar top-navbar'
-    'article article article article'
-    'printer-first-name printer-first-name printer-first-answer printer-first-answer'
-    'printer-first-cost printer-first-cost printer-first-cost-answer printer-first-cost-answer'
-    'printer-first-black-cost printer-first-black-cost printer-first-black-cost-answer printer-first-black-cost-answer'
-    'printer-first-color-cost printer-first-color-cost printer-first-color-cost-answer printer-first-color-cost-answer'
-    'printer-second-name printer-second-name printer-second-answer printer-second-answer'
-    'printer-second-cost printer-second-cost printer-second-cost-answer printer-second-cost-answer'
-    'printer-second-black-cost printer-second-black-cost printer-second-black-cost-answer printer-second-black-cost-answer'
-    'printer-second-color-cost printer-second-color-cost printer-second-color-cost-answer printer-second-color-cost-answer'
-    'printer-ratio-black printer-ratio-black printer-ratio-black-answer printer-ratio-black-answer'
-    'printer-ratio-color printer-ratio-color printer-ratio-color-answer printer-ratio-color-answer'
-    'button button button button'
-    'summary summary summary summary'
-    'footer footer footer footer';
+    'header header header'
+    'top-navbar top-navbar top-navbar'
+    'article article article'
+    'printer-first-name printer-first-answer printer-first-answer'
+    'printer-first-cost printer-first-cost-answer printer-first-cost-answer'
+    'printer-first-black-cost printer-first-black-cost-answer printer-first-black-cost-answer'
+    'printer-first-color-cost printer-first-color-cost-answer printer-first-color-cost-answer'
+    'printer-second-name printer-second-answer printer-second-answer'
+    'printer-second-cost printer-second-cost-answer printer-second-cost-answer'
+    'printer-second-black-cost printer-second-black-cost-answer printer-second-black-cost-answer'
+    'printer-second-color-cost printer-second-color-cost-answer printer-second-color-cost-answer'
+    'printer-ratio-black printer-ratio-black-answer printer-ratio-black-answer'
+    'printer-ratio-color printer-ratio-color-answer printer-ratio-color-answer'
+    'button button button'
+    'summary summary summary'
+    'footer footer footer';
     gap: 5px;
 }
