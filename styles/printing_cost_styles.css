@@ -1,1 +1,221 @@
-/*# sourceMappingURL=printing_cost_styles.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(224, 224, 224);
+  font-family: "Inconsolata";
+}
+
+html, body {
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right, rgb(14, 90, 4), rgb(10, 66, 2));
+  color: rgb(255, 255, 255);
+  font-variant: small-caps;
+  font-family: "Quicksand";
+}
+
+.navbar-top {
+  background-image: linear-gradient(to bottom right, rgb(120, 219, 107), rgb(98, 219, 82));
+  margin-top: -5px;
+}
+.navbar-top ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  padding: 2px;
+}
+.navbar-top ul li {
+  position: relative;
+  padding: 20px;
+  display: block;
+}
+.navbar-top ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.navbar-top ul li:hover {
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgb(78, 151, 63), rgb(28, 109, 39));
+}
+.navbar-top li.active {
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, rgb(105, 158, 98), rgb(80, 173, 68));
+}
+
+.article {
+  padding: 15px;
+  text-align: center;
+}
+.article h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.article p {
+  font-size: 20px;
+}
+
+label {
+  font-size: 35px;
+  padding: 15px;
+}
+
+input[type=text], input[type=number] {
+  width: 75%;
+  height: 50px;
+  font-size: 35px;
+  padding: 5px;
+}
+
+button {
+  width: 90%;
+  height: 65px;
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(190, 190, 190);
+}
+
+.summary {
+  padding: 15px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.footer {
+  text-align: center;
+  background-image: linear-gradient(to bottom right, rgb(14, 90, 4), rgb(10, 66, 2));
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding: 5px;
+}
+.footer p {
+  padding: 3px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-top ul {
+    flex-direction: column;
+  }
+  .navbar-top li.active {
+    width: 98%;
+    text-align: center;
+  }
+  .navbar-top li:hover {
+    width: 98%;
+    text-align: center;
+  }
+}
+.item-header {
+  grid-area: header;
+}
+
+.item-top-navbar {
+  grid-area: top-navbar;
+}
+
+.item-article {
+  grid-area: article;
+}
+
+.item-form-printer {
+  grid-area: printer-name;
+}
+
+.item-form-printer-answer {
+  grid-area: printer-answer;
+}
+
+.item-form-blackCount {
+  grid-area: black-count;
+}
+
+.item-form-blackCount-answer {
+  grid-area: black-answer;
+}
+
+.item-form-colorCount {
+  grid-area: color-count;
+}
+
+.item-form-colorCount-answer {
+  grid-area: color-answer;
+}
+
+.item-form-blackCost {
+  grid-area: black-cost;
+}
+
+.item-form-blackCost-answer {
+  grid-area: black-cost-answer;
+}
+
+.item-form-cyanCost {
+  grid-area: cyan-cost;
+}
+
+.item-form-cyanCost-answer {
+  grid-area: cyan-cost-answer;
+}
+
+.item-form-magentaCost {
+  grid-area: magenta-cost;
+}
+
+.item-form-magentaCost-answer {
+  grid-area: magenta-cost-answer;
+}
+
+.item-form-yellowCost {
+  grid-area: yellow-cost;
+}
+
+.item-form-yellowCost-answer {
+  grid-area: yellow-cost-answer;
+}
+
+.item-form-button {
+  text-align: center;
+  grid-area: button;
+}
+
+.item-summary {
+  grid-area: summary;
+}
+
+.item-footer {
+  grid-area: footer;
+}
+
+.grid-service-cost-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto auto 1fr;
+  min-height: 100%;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: "header header header header" "top-navbar top-navbar top-navbar top-navbar" "article article article article" "printer-name printer-name printer-answer printer-answer" "black-count black-answer color-count color-answer" "black-cost black-cost-answer cyan-cost cyan-cost-answer" "magenta-cost magenta-cost-answer yellow-cost yellow-cost-answer" "button button button button" "summary summary summary summary" "footer footer footer footer";
+  gap: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .grid-service-cost-container {
+    display: grid;
+    grid-template-areas: "header header" "top-navbar top-navbar" "article article" "printer-name printer-answer" "black-count black-answer" "color-count color-answer" "black-cost black-cost-answer" "cyan-cost cyan-cost-answer" "magenta-cost magenta-cost-answer" "yellow-cost yellow-cost-answer" "button button" "summary summary" "footer footer";
+    gap: 5px;
+  }
+}/*# sourceMappingURL=printing_cost_styles.css.map */

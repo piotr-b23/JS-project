@@ -1,0 +1,42 @@
+@import "_common_elements.scss";
+@import "grid_items.scss";
+
+.grid-service-cost-container{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto 1fr;
+    min-height: 100%;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+    'header header header header'
+    'top-navbar top-navbar top-navbar top-navbar'
+    'article article article article'
+    'printer-name printer-name printer-answer printer-answer'
+    'black-count black-answer color-count color-answer'
+    'black-cost black-cost-answer cyan-cost cyan-cost-answer'
+    'magenta-cost magenta-cost-answer yellow-cost yellow-cost-answer'
+    'button button button button'
+    'summary summary summary summary'
+    'footer footer footer footer';
+    gap: 5px;
+}
+
+@media screen and (max-width:700px) {
+    .grid-service-cost-container{
+        display: grid;
+        grid-template-areas:
+        'header header'
+        'top-navbar top-navbar'
+        'article article'
+        'printer-name printer-answer'
+        'black-count black-answer'
+        'color-count color-answer'
+        'black-cost black-cost-answer' 
+        'cyan-cost cyan-cost-answer'
+        'magenta-cost magenta-cost-answer' 
+        'yellow-cost yellow-cost-answer'
+        'button button'
+        'summary summary'
+        'footer footer';
+        gap: 5px;
+    }
+}
