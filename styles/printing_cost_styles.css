@@ -200,35 +200,83 @@ button:hover {
 }
 
 .item-form-printer-first {
-  grid-area: printer-name;
+  grid-area: printer-first-name;
 }
 
 .item-form-printer-first-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-answer;
 }
 
 .item-form-first-printerCost {
-  grid-area: printer-name;
+  grid-area: printer-first-cost;
 }
 
 .item-form-first-printerCost-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-cost-answer;
 }
 
 .item-form-first-blackCost {
-  grid-area: printer-name;
+  grid-area: printer-first-black-cost;
 }
 
 .item-form-first-blackCost-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-black-cost-answer;
 }
 
 .item-form-first-colorCost {
-  grid-area: printer-name;
+  grid-area: printer-first-color-cost;
 }
 
 .item-form-first-colorCost-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-color-cost-answer;
+}
+
+.item-form-printer-second {
+  grid-area: printer-second-name;
+}
+
+.item-form-printer-second-answer {
+  grid-area: printer-second-answer;
+}
+
+.item-form-second-printerCost {
+  grid-area: printer-second-cost;
+}
+
+.item-form-second-printerCost-answer {
+  grid-area: printer-second-cost-answer;
+}
+
+.item-form-second-blackCost {
+  grid-area: printer-second-black-cost;
+}
+
+.item-form-second-blackCost-answer {
+  grid-area: printer-second-black-cost-answer;
+}
+
+.item-form-second-colorCost {
+  grid-area: printer-second-color-cost;
+}
+
+.item-form-second-colorCost-answer {
+  grid-area: printer-second-color-cost-answer;
+}
+
+.item-form-blackCountRatio {
+  grid-area: printer-ratio-black;
+}
+
+.item-form-blackCountRatio-answer {
+  grid-area: printer-ratio-black-answer;
+}
+
+.item-form-colorCountRatio {
+  grid-area: printer-ratio-color;
+}
+
+.item-form-colorCountRatio-answer {
+  grid-area: printer-ratio-color-answer;
 }
 
 .item-footer {
@@ -237,9 +285,6 @@ button:hover {
 
 .grid-service-cost-container {
   display: grid;
-  grid-template-rows: auto auto auto auto auto auto auto auto 1fr;
-  min-height: 100%;
-  grid-template-columns: auto auto auto auto;
   grid-template-areas: "header header header header" "top-navbar top-navbar top-navbar top-navbar" "article article article article" "printer-first-name printer-first-name printer-first-answer printer-first-answer" "printer-first-cost printer-first-cost printer-first-cost-answer printer-first-cost-answer" "printer-first-black-cost printer-first-black-cost printer-first-black-cost-answer printer-first-black-cost-answer" "printer-first-color-cost printer-first-color-cost printer-first-cost-color-answer printer-first-color-cost-answer" "printer-second-name printer-second-name printer-second-answer printer-first-answer" "printer-second-cost printer-second-cost printer-second-cost-answer printer-second-cost-answer" "printer-second-black-cost printer-second-black-cost printer-second-black-cost-answer printer-second-black-cost-answer" "printer-second-color-cost printer-second-color-cost printer-second-cost-color-answer printer-second-color-cost-answer" "printer-ratio-black printer-ratio-black printer-ratio-black-answer printer-ratio-black-answer" "printer-ratio-color printer-ratio-color printer-ratio-color-answer printer-ratio-color-answer" "button button button button" "summary summary summary summary" "footer footer footer footer";
   gap: 5px;
 }/*# sourceMappingURL=printing_cost_styles.css.map */

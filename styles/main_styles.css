@@ -200,35 +200,83 @@ button:hover {
 }
 
 .item-form-printer-first {
-  grid-area: printer-name;
+  grid-area: printer-first-name;
 }
 
 .item-form-printer-first-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-answer;
 }
 
 .item-form-first-printerCost {
-  grid-area: printer-name;
+  grid-area: printer-first-cost;
 }
 
 .item-form-first-printerCost-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-cost-answer;
 }
 
 .item-form-first-blackCost {
-  grid-area: printer-name;
+  grid-area: printer-first-black-cost;
 }
 
 .item-form-first-blackCost-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-black-cost-answer;
 }
 
 .item-form-first-colorCost {
-  grid-area: printer-name;
+  grid-area: printer-first-color-cost;
 }
 
 .item-form-first-colorCost-answer {
-  grid-area: printer-answer;
+  grid-area: printer-first-color-cost-answer;
+}
+
+.item-form-printer-second {
+  grid-area: printer-second-name;
+}
+
+.item-form-printer-second-answer {
+  grid-area: printer-second-answer;
+}
+
+.item-form-second-printerCost {
+  grid-area: printer-second-cost;
+}
+
+.item-form-second-printerCost-answer {
+  grid-area: printer-second-cost-answer;
+}
+
+.item-form-second-blackCost {
+  grid-area: printer-second-black-cost;
+}
+
+.item-form-second-blackCost-answer {
+  grid-area: printer-second-black-cost-answer;
+}
+
+.item-form-second-colorCost {
+  grid-area: printer-second-color-cost;
+}
+
+.item-form-second-colorCost-answer {
+  grid-area: printer-second-color-cost-answer;
+}
+
+.item-form-blackCountRatio {
+  grid-area: printer-ratio-black;
+}
+
+.item-form-blackCountRatio-answer {
+  grid-area: printer-ratio-black-answer;
+}
+
+.item-form-colorCountRatio {
+  grid-area: printer-ratio-color;
+}
+
+.item-form-colorCountRatio-answer {
+  grid-area: printer-ratio-color-answer;
 }
 
 .item-footer {
