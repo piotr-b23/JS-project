@@ -3,7 +3,6 @@
 
 .grid-service-cost-container{
     display: grid;
-
     grid-template-areas:
     'header header header'
     'top-navbar top-navbar top-navbar'
@@ -22,4 +21,38 @@
     'summary summary summary'
     'footer footer footer';
     gap: 5px;
+}
+
+@media screen and (max-width:700px) {
+    .grid-service-cost-container{
+        display: grid;
+        grid-template-areas:
+        'header'
+        'top-navbar'
+        'article'
+        'printer-first-name'
+        'printer-first-answer'
+        'printer-first-cost'
+        'printer-first-cost-answer'
+        'printer-first-black-cost'
+        'printer-first-black-cost-answer'
+        'printer-first-color-cost'
+        'printer-first-color-cost-answer'
+        'printer-second-name'
+        'printer-second-answer'
+        'printer-second-cost'
+        'printer-second-cost-answer'
+        'printer-second-black-cost'
+        'printer-second-black-cost-answer'
+        'printer-second-color-cost'
+        'printer-second-color-cost-answer'
+        'printer-ratio-black'
+        'printer-ratio-black-answer'
+        'printer-ratio-color'
+        'printer-ratio-color-answer'
+        'button'
+        'summary'
+        'footer';
+        gap: 5px;
+    }
 }
