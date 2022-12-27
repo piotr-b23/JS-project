@@ -15,12 +15,12 @@ function calculateCosts(){
     }
     else if (bcount && bcost ){
         let blackPageCost = (bcost/bcount)/100;
-        summaryText += "Printing only in black will cost you " + blackPageCost + " of your currency per page.<br>";
+        summaryText += "Printing only in black will cost you <b>" + blackPageCost + "</b> of your currency per page.<br>";
         document.getElementById("summary").style.visibility = "visible";
         document.getElementById("summaryText").innerHTML = summaryText;
         if (ccount && ccost && mcost && ycost){
             let colorPageCost = ((ccost+mcost+ycost)/ccount)/100 + blackPageCost;
-            summaryText += "Printing in color will cost you " + colorPageCost + " of your currency per page.<br>";
+            summaryText += "Printing in color will cost you <b>" + colorPageCost + "</b> of your currency per page.<br>";
             document.getElementById("summaryText").innerHTML = summaryText;
         }
     }

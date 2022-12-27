@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Print cost comparasion</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Site used to compare printing costs">
+        <link rel ="stylesheet" href=".\styles\material_cost_styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <script src="raw_cost_script.js"></script>
+        <div class="grid-material-cost-container">
+            <div class="item-header">
+                <div class="header">
+                    <h1>Printing costs calculator</h1>
+                </div>
+
+            </div>
+            <div class="item-top-navbar">
+                <div class="navbar-top">
+                    <ul>
+                        <li><a href="main.htm">Main</a></li>
+                        <li><a href="material_cost.htm">Raw material costs</a></li>
+                        <li  class="active" ><a href="#header">Printing service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="item-article">
+                <div class="article">
+                    <h2 class="article-header">Raw printing costs.</h2>
+                    <p class="article-content">
+                        Printing as a service is a viable option for owning a printer in your
+                        company. You pay the initial price of the printer, and then pay monthly
+                        for pages you printed in black and color. The company you signed the deal with
+                        takes care of everything excluding paper. No need to worry about parts to fix
+                        the printer when it brakes.<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="item-form-printer-first">
+                <label for="printer-first">First Printer: </label>
+            </div>
+            <div class="item-form-printer-first-answer">
+                <input type="text" id="printer-first" name="printer-first">
+            </div>
+
+            <div class="item-form-first-printerCost">
+                <label for="firstPrinterCost">First Printer cost: </label>
+            </div>
+            <div class="item-form-first-printerCost-answer">
+                <input type="number" step="0.01" id="firstPrinterCost" name="firstPrinterCost">
+            </div>
+
+            <div class="item-form-first-blackCost">
+                <label for="firstBlackCost">First Printer Black cost: </label>
+            </div>
+            <div class="item-form-first-blackCost-answer">
+                <input type="number" step="0.01" id="firstBlackCost" name="firstBlackCost">
+            </div>
+
+            <div class="item-form-first-colorCost">
+                <label for="firstColorCost">First Printer Color cost: </label>
+            </div>
+            <div class="item-form-first-colorCost-answer">
+                <input type="number" step="0.01" id="firstColorCost" name="firstColorCost">
+            </div>
+            
+
+            <div class="item-form-printer-second">
+                <label for="printer-second">Second Printer: </label>
+            </div>
+            <div class="item-form-printer-second-answer">
+                <input type="text" id="printer-second" name="printer-second">
+            </div>
+
+            <div class="item-form-second-printerCost">
+                <label for="secondPrinterCost">Second Printer cost: </label>
+            </div>
+            <div class="item-form-second-printerCost-answer">
+                <input type="number" step="0.01" id="secondPrinterCost" name="secondPrinterCost">
+            </div>
+
+            <div class="item-form-second-blackCost">
+                <label for="secondBlackCost">Second Printer Black cost: </label>
+            </div>
+            <div class="item-form-second-blackCost-answer">
+                <input type="number" step="0.01" id="secondBlackCost" name="secondBlackCost">
+            </div>
+
+            <div class="item-form-second-colorCost">
+                <label for="secondColorCost">Second Printer Color cost: </label>
+            </div>
+            <div class="item-form-second-colorCost-answer">
+                <input type="number" step="0.01" id="secondColorCost" name="secondColorCost">
+            </div>
+
+            <div class="item-form-blackCountRatio">
+                <label for="blackCountRatio">Black count ratio ratio: </label>
+            </div>
+            <div class="item-form-blackCountRatio-answer">
+                <input type="number" step="1" id="blackCountRatio" name="blackCountRatio">
+            </div>
+
+            <div class="item-form-colorCountRatio">
+                <label for="colorCountRatio">Color count ratio: </label>
+            </div>
+            <div class="item-form-colorCountRatio-answer">
+                <input type="number" step="1" id="colorCountRatio" name="colorCountRatio">
+            </div>
+
+            <div class="item-form-button">
+                <button onclick="calculateCosts()">Calculate</button>
+            </div>
+
+            <div class="item-summary">
+                <div class="summary" id="summary">
+                    <h2 class="article-header">Summary</h2>
+                    <p class="article-content" id="summaryText">
+                    </p>
+                </div>
+            </div>
+
+            <div class="item-footer">
+                <div class="footer">
+                    <p>This site was created by Piotr Bobeł</p>
+                    <p>All rights reserved</p>
+                    <p>Do not use without author permission </p>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+
+</html>
