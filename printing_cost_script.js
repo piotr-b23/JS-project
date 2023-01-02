@@ -1,13 +1,98 @@
-function calculateCosts(){
-    let fpname = document.getElementById("printer-first").value;
-    let fpcost =  parseInt(parseFloat(document.getElementById("firstPrinterCost").value)*100);
-    let fbcost = parseInt(parseFloat(document.getElementById("firstBlackCost").value)*100);
-    let fccost = parseInt(parseFloat(document.getElementById("firstColorCost").value)*100);
+function calculateBlackPageCosts(fpname, spname, fpcost,spcost,fbcost,sbcost){
+    let summaryText = "";
+    let bpagecount = 0;
+    let totalFirstPrinterCost = fpcost;
+    let totalSecondtPrinterCost = spcost;
 
-    let spname = document.getElementById("printer-second").value;
-    let spcost = parseInt(parseFloat(document.getElementById("secondPrinterCost").value)*100);
-    let sbcost = parseInt(parseFloat(document.getElementById("secondBlackCost").value)*100);
-    let sccost = parseInt(parseFloat(document.getElementById("secondColorCost").value)*100);
+    if(totalFirstPrinterCost > totalSecondtPrinterCost && fbcost < sbcost){
+        
+        while((totalFirstPrinterCost - totalSecondtPrinterCost) >=0){
+            totalFirstPrinterCost += fbcost;
+            totalSecondtPrinterCost += sbcost;
+            bpagecount += 1;
+        }
+        summaryText = "Printer " + fpname + " will print " + bpagecount +
+        " total black pages before printer " + spname + " will match its price, totaling " +
+        totalSecondtPrinterCost/100 + " of your currency.<br>";
+
+    }
+    else if(totalFirstPrinterCost > totalSecondtPrinterCost && fbcost >= sbcost){
+        summaryText = "Printer " + fpname +
+         " is more expensive in its basic price and in its black pages printing cost. Choose printer " + spname + ".<br>";
+    }
+    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fbcost > sbcost){
+        
+        while((totalSecondtPrinterCost - totalFirstPrinterCost) >=0){
+            totalFirstPrinterCost += fbcost;
+            totalSecondtPrinterCost += sbcost;
+            bpagecount += 1;
+        }
+        summaryText = "Printer " + spname + " will print " + bpagecount +
+        " total black pages before printer " + fpname + " will match its price, totaling " +
+        totalSecondtPrinterCost/100 + " of your currency.<br>";
+
+    }
+    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fbcost <= sbcost){
+        summaryText = "Printer " + spname +
+         " is more expensive in its basic price and in its black pages printing cost. Choose printer " + fpname + ".<br>";
+    }
+
+    return summaryText;
+}
+
+function calculateColorPageCosts(fpname, spname, fpcost,spcost,fccost,sccost){
+    let summaryText = "";
+    let cpagecount = 0;
+    let totalFirstPrinterCost = fpcost;
+    let totalSecondtPrinterCost = spcost;
+
+    if(totalFirstPrinterCost > totalSecondtPrinterCost && fccost < sccost){
+        
+        while((totalFirstPrinterCost - totalSecondtPrinterCost) >=0){
+            totalFirstPrinterCost += fccost;
+            totalSecondtPrinterCost += sccost;
+            cpagecount += 1;
+        }
+        summaryText = "Printer " + fpname + " will print " + cpagecount +
+        " total color pages before printer " + spname + " will match its price, totaling " +
+        totalSecondtPrinterCost/100 + " of your currency.<br>";
+
+    }
+    else if(totalFirstPrinterCost > totalSecondtPrinterCost && fccost >= sccost){
+        summaryText = "Printer " + fpname +
+         " is more expensive in its basic price and in its color pages printing cost. Choose printer " + spname + " if you plan to plin mostly in color.<br>";
+    }
+    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fccost > sccost){
+        
+        while((totalSecondtPrinterCost - totalFirstPrinterCost) >=0){
+            totalFirstPrinterCost += fccost;
+            totalSecondtPrinterCost += sccost;
+            cpagecount += 1;
+        }
+        summaryText = "Printer " + spname + " will print " + cpagecount +
+        " total color pages before printer " + fpname + " will match its price, totaling " +
+        totalSecondtPrinterCost/100 + " of your currency.<br>";
+
+    }
+    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fccost <= sccost){
+        summaryText = "Printer " + spname +
+         " is more expensive in its basic price and in its color pages printing cost. Choose printer " + fpname + " if you plan to plin mostly in color.<br>";
+    }
+
+    return summaryText;
+}
+
+
+function calculateCosts(){
+    let fpname = document.getElementById("printer-first").value;  //first printer name
+    let fpcost =  parseInt(parseFloat(document.getElementById("firstPrinterCost").value)*100); //first printer cost
+    let fbcost = parseInt(parseFloat(document.getElementById("firstBlackCost").value)*100);  //first printer black page cost
+    let fccost = parseInt(parseFloat(document.getElementById("firstColorCost").value)*100); // first printer color page cost
+
+    let spname = document.getElementById("printer-second").value;  //second printer name
+    let spcost = parseInt(parseFloat(document.getElementById("secondPrinterCost").value)*100); //second printer cost
+    let sbcost = parseInt(parseFloat(document.getElementById("secondBlackCost").value)*100);  //second printer black cost
+    let sccost = parseInt(parseFloat(document.getElementById("secondColorCost").value)*100);  //second prinetr color cost
 
     let summaryText = "";
 
@@ -19,49 +104,19 @@ function calculateCosts(){
     }
     else if (fpcost && fbcost && spcost && sbcost){
         if(fbcost==sbcost){
-            summaryText = "Printing costs in black will never cross. Choose cheaper printer";
+            summaryText = "Printing costs in black will never cross. Choose cheaper printer if you only print in black.";
         }
         else{
-            let bpagecount = 0;
-            let totalFirstPrinterCost = fpcost;
-            let totalSecondtPrinterCost = spcost;
+            summaryText = calculateBlackPageCosts(fpname, spname, fpcost, spcost, fbcost, sbcost );
+        }
 
-            if(totalFirstPrinterCost > totalSecondtPrinterCost && fbcost < sbcost){
-                
-                while((totalFirstPrinterCost - totalSecondtPrinterCost) >=0){
-                    totalFirstPrinterCost += fbcost;
-                    totalSecondtPrinterCost += sbcost;
-                    bpagecount += 1;
-                }
-                summaryText = "Printer " + fpname + " will print " + bpagecount +
-                " total black pages before printer " + spname + " will match its price, totaling " +
-                totalSecondtPrinterCost/100 + " of your currency.<br>";
-
+        if(fccost && sccost){
+            if(fccost==sccost){
+                summaryText += "Printing costs in color will never cross. Choose cheaper printer if you plan to print mostly in color.";
             }
             else{
-                summaryText = "Printer " + fpname +
-                 " is more expensive in its basic price and in its black pages printing cost. Choose printer " + spname + ".<br>";
+                summaryText += calculateBlackPageCosts(fpname, spname, fpcost, spcost, fccost, sccost );
             }
-
-            if(totalFirstPrinterCost < totalSecondtPrinterCost && fbcost > sbcost){
-                
-                while((totalSecondtPrinterCost - totalFirstPrinterCost) >=0){
-                    totalFirstPrinterCost += fbcost;
-                    totalSecondtPrinterCost += sbcost;
-                    bpagecount += 1;
-                }
-                summaryText = "Printer " + spname + " will print " + bpagecount +
-                " total black pages before printer " + fpname + " will match its price, totaling " +
-                totalSecondtPrinterCost/100 + " of your currency.<br>";
-
-            }
-            else{
-                summaryText = "Printer " + spname +
-                 " is more expensive in its basic price and in its black pages printing cost. Choose printer " + fpname + ".<br>";
-            }
-
-
-
         }
 
         document.getElementById("summaryText").innerHTML = summaryText;
