@@ -7,7 +7,7 @@ function calculateCosts(){
     let mcost = parseInt(parseFloat(document.getElementById("magentaCost").value)*100);
     let ycost = parseInt(parseFloat(document.getElementById("yellowCost").value)*100);
 
-    let summaryText = "Printing costs in printer " + pname + " are:<br>";
+    let summaryText = "Printing costs for printer " + pname + " are:<br>";
 
     if(bcount <= 0 || ccount <= 0 || bcost <= 0 || ccost <= 0 || mcost <= 0 || ycost <= 0){
         alert("Error, wrong input values");
