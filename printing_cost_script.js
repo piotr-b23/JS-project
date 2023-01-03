@@ -1,87 +1,3 @@
-function calculateBlackPageCosts(fpname, spname, fpcost,spcost,fbcost,sbcost){
-    let summaryText = "";
-    let bpagecount = 0;
-    let totalFirstPrinterCost = fpcost;
-    let totalSecondtPrinterCost = spcost;
-
-    if(totalFirstPrinterCost > totalSecondtPrinterCost && fbcost < sbcost){
-        
-        while((totalFirstPrinterCost - totalSecondtPrinterCost) >=0){
-            totalFirstPrinterCost += fbcost;
-            totalSecondtPrinterCost += sbcost;
-            bpagecount += 1;
-        }
-        summaryText = "Printer " + fpname + " will print " + bpagecount +
-        " total black pages before printer " + spname + " will match its price, totaling " +
-        totalSecondtPrinterCost/100 + " of your currency.<br>";
-
-    }
-    else if(totalFirstPrinterCost > totalSecondtPrinterCost && fbcost >= sbcost){
-        summaryText = "Printer " + fpname +
-         " is more expensive in its basic price and in its black pages printing cost. Choose printer " + spname + ".<br>";
-    }
-    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fbcost > sbcost){
-        
-        while((totalSecondtPrinterCost - totalFirstPrinterCost) >=0){
-            totalFirstPrinterCost += fbcost;
-            totalSecondtPrinterCost += sbcost;
-            bpagecount += 1;
-        }
-        summaryText = "Printer " + spname + " will print " + bpagecount +
-        " total black pages before printer " + fpname + " will match its price, totaling " +
-        totalSecondtPrinterCost/100 + " of your currency.<br>";
-
-    }
-    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fbcost <= sbcost){
-        summaryText = "Printer " + spname +
-         " is more expensive in its basic price and in its black pages printing cost. Choose printer " + fpname + ".<br>";
-    }
-
-    return summaryText;
-}
-
-function calculateColorPageCosts(fpname, spname, fpcost,spcost,fccost,sccost){
-    let summaryText = "";
-    let cpagecount = 0;
-    let totalFirstPrinterCost = fpcost;
-    let totalSecondtPrinterCost = spcost;
-
-    if(totalFirstPrinterCost > totalSecondtPrinterCost && fccost < sccost){
-        
-        while((totalFirstPrinterCost - totalSecondtPrinterCost) >=0){
-            totalFirstPrinterCost += fccost;
-            totalSecondtPrinterCost += sccost;
-            cpagecount += 1;
-        }
-        summaryText = "Printer " + fpname + " will print " + cpagecount +
-        " total color pages before printer " + spname + " will match its price, totaling " +
-        totalSecondtPrinterCost/100 + " of your currency.<br>";
-
-    }
-    else if(totalFirstPrinterCost > totalSecondtPrinterCost && fccost >= sccost){
-        summaryText = "Printer " + fpname +
-         " is more expensive in its basic price and in its color pages printing cost. Choose printer " + spname + " if you plan to plin mostly in color.<br>";
-    }
-    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fccost > sccost){
-        
-        while((totalSecondtPrinterCost - totalFirstPrinterCost) >=0){
-            totalFirstPrinterCost += fccost;
-            totalSecondtPrinterCost += sccost;
-            cpagecount += 1;
-        }
-        summaryText = "Printer " + spname + " will print " + cpagecount +
-        " total color pages before printer " + fpname + " will match its price, totaling " +
-        totalSecondtPrinterCost/100 + " of your currency.<br>";
-
-    }
-    else if(totalFirstPrinterCost < totalSecondtPrinterCost && fccost <= sccost){
-        summaryText = "Printer " + spname +
-         " is more expensive in its basic price and in its color pages printing cost. Choose printer " + fpname + " if you plan to plin mostly in color.<br>";
-    }
-
-    return summaryText;
-}
-
 function calculatePageCosts(fpname, spname, fpcost,spcost,ftcost,stcost){
     let pageCount = 0;
     let totalFirstPrinterCost = fpcost;
@@ -179,12 +95,24 @@ function calculateCosts(){
                 }
                 else{
                     summaryText += "Printer " + colorCosts.betterPrinter + " will print " + colorCosts.totalPagesPrinted +
-                    " total black color before printer " + colorCosts.worstPrinter + " will match its price, totaling " +
+                    " total color pages before printer " + colorCosts.worstPrinter + " will match its price, totaling " +
                     colorCosts.totalCostOfPrinting/100 + " of your currency. "  + colorCosts.worstPrinter +
                     " will be more expensive from this point <br>";
                 }
             }
             if(bratio && cratio && bratio != cratio && bratio > 0 && cratio > 0){
+                const ratioCosts = calculatePageCosts(fpname, spname, fpcost, spcost,(bratio*fbcost + cratio * fccost), (bratio*sbcost + cratio * sccost));
+                if(ratioCosts.totalCostOfPrinting==0){
+                    summaryText += "Printer " + ratioCosts.worstPrinter +
+                    " is more expensive in its basic price and in its combine costs of pages printing. Choose printer " + ratioCosts.betterPrinter + 
+                    " if you plan to print in chosen ratio.<br>";  
+                }
+                else{
+                    summaryText += "Printer " + ratioCosts.betterPrinter + " will print " + (ratioCosts.totalPagesPrinted * (bratio + cratio)) +
+                    " total of inputed ratio before printer " + ratioCosts.worstPrinter + " will match its price, totaling " +
+                    ratioCosts.totalCostOfPrinting/100 + " of your currency. "  + ratioCosts.worstPrinter +
+                    " will be more expensive from this point <br>";
+                }
 
             }
         }
